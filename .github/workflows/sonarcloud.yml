@@ -15,7 +15,7 @@ jobs:
     if: github.repository_owner == 'escendit'
     steps:
       - name: Install GitVersion
-        uses: gittools/actions/gitversion/setup@v1
+        uses: gittools/actions/gitversion/setup@v2
         with:
           versionSpec: '5.x'
       - name: Set up JDK 17
@@ -33,7 +33,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Determine Version
-        uses: gittools/actions/gitversion/execute@v1
+        uses: gittools/actions/gitversion/execute@v2
         with:
           useConfigFile: true
       - name: Cache SonarCloud packages
